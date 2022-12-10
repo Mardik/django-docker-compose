@@ -15,7 +15,7 @@ Com docker e docker-compose devidamente instalados e configurados. Criar um novo
 docker-compose run web django-admin startproject devopspbsproject .
 ```
 
-Se você estiver rodando Docker diretamente sobre Linux é necessário ajustar as permissões. Lembre-se de repetir o comando abaixo sempre que estiver problemas para acessar os arquivos diretamente no Docker host.
+Se você estiver rodando Docker diretamente sobre Linux é necessário ajustar as permissões. Lembre-se de repetir o comando abaixo sempre que estiver com problemas para acessar arquivos/diretórios diretamente no Docker host.
 
 ```console
 sudo chown -R $USER:$USER .
@@ -46,6 +46,10 @@ Para rodar comandos no "container do Django" use `docker-compose exec web`, como
 
 ```console
 docker-compose exec web django-admin help
+```
+
+```console
+docker-compose exec web python manage.py startapp core
 ```
 
 ## Referências
